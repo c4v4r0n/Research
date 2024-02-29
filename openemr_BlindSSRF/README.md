@@ -3,6 +3,8 @@
 Basically there is no input sanitization in the PDF content that is generated in interface/procedure_tools/labcorp/ereq_form.php.
 For example we can use the $form_id variable (line 20) to inject an img tag with the src attribute that points to a server we control.
 
+https://nvd.nist.gov/vuln/detail/CVE-2024-26476
+
 Product: https://www.open-emr.org/
 
 Vulnerable: version < 7.0.2
